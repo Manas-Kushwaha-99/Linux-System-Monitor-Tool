@@ -1,5 +1,4 @@
 // sysmonitor.cpp
-// Single-file System Monitor (assistant's code updated per your requests)
 // Compile:
 //   g++ -std=c++17 -O2 -Wall sysmonitor.cpp -lncurses -o sysmonitor
 // Run:
@@ -76,8 +75,7 @@ static bool read_proc_basic(int pid, unsigned long long &pjiffies, long &vmrss_k
     string rest = statLine.substr(rp + 2);
     stringstream ss(rest);
     ss >> state; // state is first token after comm
-    // We need utime (field 14) and stime (15) relative to full stat; since we cut rest, we must parse tokens.
-    // In rest, fields start at position 3. utime becomes index 11 (0-based) and stime 12.
+    
     vector<unsigned long long> vals;
     unsigned long long v;
     while (ss >> v) vals.push_back(v);
