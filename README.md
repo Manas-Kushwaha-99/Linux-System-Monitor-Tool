@@ -76,3 +76,9 @@ g++ -std=c++17 -O2 -Wall sysmonitor.cpp -lncurses -o sysmonitor
 * This tool must be run on a **Linux environment**, as it relies on the `/proc` filesystem.
 * It does not require any additional libraries beyond **Ncurses**.
 * Works in any terminal emulator that supports Ncurses (like GNOME Terminal, Konsole, or Alacritty).
+
+---
+
+### 🙏 Acknowledgements
+
+This project was built with the assistance of AI tools for code generation, debugging, and documentation.
